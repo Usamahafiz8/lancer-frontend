@@ -5,7 +5,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import "../styles/globals.css"; // Global styles for Tailwind and custom CSS
 import { Container } from "@mui/material";
 import CustomTheme from "../shared-theme/AppTheme";
-// import AppTheme from "@shared-theme/AppTheme.js";
+import Head from "next/head"; // Importing Head from next/head
+
 // Create your custom theme for MUI
 const theme = createTheme({
   palette: {
@@ -25,6 +26,20 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <CustomTheme {...pageProps}>
+        {/* Metadata in the <Head> component */}
+        <Head>
+          <title>Lancer Planet</title>
+          <meta name="description" content="A Web3 Freelance Platform" />
+          <meta name="keywords" content="web3, freelance, web3 freelance, seo, blockchain, blockchain freelance platform" />
+          <meta name="author" content="Cybill Nerd" />
+          
+          {/* Favicon */}
+          <link rel="icon" href="/favicon.ico" />
+          
+          {/* For Apple devices and iOS */}
+          <link rel="apple-touch-icon" href="/favicon.ico" />
+        </Head>
+
         <CssBaseline enableColorScheme />
         <Container maxWidth="lg">
           <Component {...pageProps} />
