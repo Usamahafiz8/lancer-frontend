@@ -195,7 +195,7 @@ export default function SignIn(props) {
             <Button
               fullWidth
               variant="outlined"
-              onClick={() => alert('Sign in with Google')}
+              onClick={() => alert('Comming Soon!')}
             //   startIcon={<GoogleIcon />}
             >
              Connect with wallet
