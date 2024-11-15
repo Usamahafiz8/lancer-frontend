@@ -15,6 +15,7 @@ import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
 import { Container } from '@mui/material';
+import LancerPlanetLogoSymbol from '../components/logo/LancerPlanetLogoSymbol';
 
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -119,7 +120,7 @@ const router = useRouter();
       sx={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        minHeight: '100vh',
+        minHeight: '80vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -129,6 +130,7 @@ const router = useRouter();
       }}
     >
       <Container maxWidth="sm">
+      <LancerPlanetLogoSymbol width="20%" styles={{marginBottom: 4}}/>
         <Typography variant="h2" component="h1" sx={{ fontWeight: 700, mb: 3 }}>
           Welcome to Lancer
         </Typography>
@@ -146,7 +148,7 @@ const router = useRouter();
           color="secondary"
           size="large"
           onClick={() => handleRedirect('/sign-in')} // Redirect to sign-in page
-          sx={{ padding: '12px 24px', fontSize: '16px', marginRight: '8px' }}
+          sx={{  fontSize: '16px', marginRight: '22px' }}
         >
           Sign In
         </Button>
@@ -156,7 +158,7 @@ const router = useRouter();
           color="secondary"
           size="large"
           onClick={() => handleRedirect('/sign-up')} // Redirect to sign-up page
-          sx={{ padding: '12px 24px', fontSize: '16px' }}
+          sx={{  fontSize: '16px' }}
         >
           Sign Up
         </Button>

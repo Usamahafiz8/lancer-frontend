@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
+import LancerPlanetLogoSymbol from '../../components/logo/LancerPlanetLogoSymbol';
 
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -118,10 +119,9 @@ export default function SignUp(props) {
 
   return (
     < >
-  
       <SignUpContainer direction="column" justifyContent="space-between">
         <Card variant="outlined">
-          {/* <SitemarkIcon /> */}
+        <LancerPlanetLogoSymbol width={'40px'} />
           <Typography
             component="h1"
             variant="h4"
