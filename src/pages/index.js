@@ -1,75 +1,4 @@
-// // pages/index.js
-// import React from 'react';
-// import { Button, Box, Typography, Container } from '@mui/material';
-// import { useRouter } from 'next/router';
-
-// export default function Home() {
-//   const router = useRouter();
-
-//   // Function to redirect to the sign-up page
-//   const handleRedirect = (path) => {
-//     router.push(path);
-//   };
-
-//   return (
-    // <Box
-    //   sx={{
-    //     backgroundImage: 'url("/assets/landing-background.jpg")', // Example background image
-    //     backgroundSize: 'cover',
-    //     backgroundPosition: 'center',
-    //     minHeight: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     textAlign: 'center',
-    //     color: '#fff',
-    //     padding: 2,
-    //   }}
-    // >
-    //   <Container maxWidth="sm">
-    //     <Typography variant="h2" component="h1" sx={{ fontWeight: 700, mb: 3 }}>
-    //       Welcome to Lancer
-    //     </Typography>
-        
-    //     <Typography variant="h5" sx={{ mb: 4 }}>
-    //       Your all-in-one freelancing platform to connect with clients and get work done efficiently.
-    //     </Typography>
-        
-    //     <Typography variant="h6" sx={{ mb: 4, fontWeight: 500 }}>
-    //       It is the first Web3-based freelancing platform, powered by blockchain for secure payments and transparent transactions.
-    //     </Typography>
-        
-    //     <Button
-    //       variant="outlined"
-    //       color="secondary"
-    //       size="large"
-    //       onClick={() => handleRedirect('/sign-in')} // Redirect to sign-in page
-    //       sx={{ padding: '12px 24px', fontSize: '16px', marginRight: '8px' }}
-    //     >
-    //       Sign In
-    //     </Button>
-        
-    //     <Button
-    //       variant="outlined"
-    //       color="secondary"
-    //       size="large"
-    //       onClick={() => handleRedirect('/sign-up')} // Redirect to sign-up page
-    //       sx={{ padding: '12px 24px', fontSize: '16px' }}
-    //     >
-    //       Sign Up
-    //     </Button>
-        
-    //     <Typography variant="body1" sx={{ mt: 4, fontWeight: 400 }}>
-    //       We are open to investment, collaboration, and contributions. Feel free to contact us on Telegram: 
-    //       <a href="https://t.me/cybillnerd" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontWeight: 'bold' }}>
-    //         @cybillnerd
-    //       </a>
-    //     </Typography>
-    //   </Container>
-    // </Box>
-//   );
-// }
-
+import { useRouter } from 'next/router';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -174,20 +103,13 @@ export default function SignUp(props) {
 
     return isValid;
   };
+const router = useRouter();
 
-  const handleSubmit = (event) => {
-    if (nameError || emailError || passwordError) {
-      event.preventDefault();
-      return;
-    }
-    const data = new FormData(event.currentTarget);
-    console.log({
-      name: data.get('name'),
-      lastName: data.get('lastName'),
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+  //   // Function to redirect to the sign-up page
+  const handleRedirect = (path) => {
+    router.push(path);
   };
+
 
   return (
     < >
